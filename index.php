@@ -1,3 +1,8 @@
+<?php
+require 'models/User.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +13,11 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-
+<div class="listAvis">
+<?php
+include_once "controllers/indexCtrl.php";
+?>
+</div>
 
 <script src="script.js"></script>
 </body>
