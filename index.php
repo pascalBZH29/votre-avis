@@ -13,21 +13,6 @@ require 'models/User.php';
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<form method="post">
-<label for="name">Nom</label>
-<input type="text" name="name">
-<label for="name">Prénom</label>
-<input type="text" name ="firstname">
-<label for="name">e-mail</label>
-<input type="text" name ="mail">
-<label for="name">facture</label>
-<input type="text" name ="facture">
-<label for="name">Commentaire</label>
-<input type="area" name="comment">
-<label for="name">Note</label>
-<input type="text" name ="note">
-<button type="submit" name="submit">Envoyer</button>
-</form>
 <div class="listAvis">
 <?php
 include_once "controllers/indexCtrl.php";
