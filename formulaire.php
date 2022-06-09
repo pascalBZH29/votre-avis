@@ -10,7 +10,7 @@ require 'models/User.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
 
@@ -52,7 +52,7 @@ require 'models/User.php';
                 <textarea id="message" name="comment" required></textarea>
             </div>
             <div>
-                <button  class="bouton-valider" name="submit" type="submit">Valider</button>
+                <button class="bouton-valider" name="submit" type="submit">Valider</button>
             </div>
         </form>
         <a href="index.php" class="bouton-valider">sortir</a>
