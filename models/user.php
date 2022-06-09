@@ -23,11 +23,11 @@ class User {
     }
 
     public function getMail(){
-        return $this->comment;
+        return $this->mail;
     }
 
     public function getFacture(){
-        return $this->comment;
+        return $this->facture;
     }
 
     public function getComment(){

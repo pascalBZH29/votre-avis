@@ -1,6 +1,8 @@
 
 /* ------------------------------------------ */
-
+.bodyIndex{
+    background-color: rgb(171, 211, 218);
+}
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: rgb(49, 110, 207);
@@ -166,7 +168,9 @@
 }
 
 
-body {
+/*----------------- style pour la page formulaire.php ----------------*/
+
+.bodyFormulaire {
     background: #001D3D;
     font-family: Montserrat, "sans-serif";
     display: flex;

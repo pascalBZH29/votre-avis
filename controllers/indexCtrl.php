@@ -1,6 +1,7 @@
 <?php
 
-if ($_POST['submit']){
+if (!empty($_SESSION['newComment'])) {
+  
     foreach ($_SESSION['newComment'] as $value) {
        echo '<div class ="avis">';
        
@@ -29,4 +30,4 @@ if ($_POST['submit']){
         }
         echo '</div>';
      }
-    }
+}
