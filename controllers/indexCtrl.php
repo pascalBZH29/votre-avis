@@ -30,6 +30,3 @@ if ($_POST['submit']){
         echo '</div>';
      }
     }
-
-    ?>
-
