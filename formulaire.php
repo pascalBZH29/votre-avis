@@ -1,3 +1,8 @@
+<?php
+require 'models/User.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +14,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body class="bodyFomulaire">
     <div class="votre-avis">
         <h1>Donner votre avis</h1>
         <p>Un problème, une question, envie de nous envoyer un message d’amour ? N’hésitez pas, votre avis nous intéresse !</p>
@@ -24,11 +29,11 @@
             </div>
             <div>
                 <label for="email">Mail</label>
-                <input type="email" id="email" name="email" placeholder="bob.bobby@mail.com" required>
+                <input type="email" id="email" name="mail" placeholder="bob.bobby@mail.com" required>
             </div>
             <div>
                 <label for="number">Numéro de facture</label>
-                <input type="nummber" id="number" name="number" required>
+                <input type="nummber" id="number" name="facture" required>
             </div>
             <div>
                 <label for="note">Veuillez donner votre note</label>
@@ -44,13 +49,15 @@
             </div>
             <div>
                 <label for="message">Commentaire</label>
-                <textarea id="message" name="message" required></textarea>
+                <textarea id="message" name="comment" required></textarea>
             </div>
             <div>
-                <button class="bouton-valider" name="submit" type="submit">Valider</button>
+                <button  class="bouton-valider" name="submit" type="submit">Valider</button>
             </div>
         </form>
+        <a href="index.php" class="bouton-valider">sortir</a>
     </div>
+
 
 </body>
 

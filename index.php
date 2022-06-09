@@ -13,7 +13,7 @@ require 'models/User.php';
 	<link rel="stylesheet" href="assets/CSS/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body class="bodyIndex">
 
 <div class="topnav">
   <a class="active" href="#home">Home</a>
@@ -79,21 +79,8 @@ include_once "controllers/indexCtrl.php";
 ?>
 </div>
 
-<div class="form">
 
-</div>
-
-<button class="buttonAvis"><a href="controllers/indexCtrl.php">Donner mon avis</a> </button>
-
-
-
-
-
-
-
-
-
-
+<button class="buttonAvis"><a href="formulaire.php">Donner mon avis</a> </button>
 
 <script src="assets/JS/script.js"></script>
 </body>
