@@ -1,3 +1,8 @@
+<?php
+require 'models/User.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +11,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Bistrot de la Gare</title>
 	<link rel="stylesheet" href="assets/CSS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+
 <div class="topnav">
   <a class="active" href="#home">Home</a>
   <a href="#news">News</a>
@@ -16,7 +23,7 @@
   <a href="#logon">Logon</a>
 </div>
 <!-- Load icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 <!-- The form -->
 <form class="example" action="action_page.php">
@@ -28,6 +35,7 @@
 	<p>12 Rue Gentil Bernard, 92260 Fontenay-aux-Roses</p>
 	<p>Prix moyen 28 €</p>
 	<p>-20% sur la carte </p>
+
 
 	<!-- Slideshow container -->
 <div class="slideshow-container">
@@ -66,7 +74,9 @@
 
 
 <div class="listAvis">
-
+<?php
+include_once "controllers/indexCtrl.php";
+?>
 </div>
 
 <div class="form">
@@ -82,13 +92,7 @@
 
 
 
-	<h2>les avis clients:</h2>
-	<ol>
-		<li>Avis 1</li>
-		<li>Avis 2</li>
-		<li>Avis 3</li>
-		<li>Avis 4</li>
-	</ol>
+
 
 
 <script src="assets/JS/script.js"></script>
