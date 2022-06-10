@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+
 
 class User
 {
@@ -46,3 +46,11 @@ class User
         return $this->note;
     }
 }
+
+
+
+
+
+
+
+
