@@ -1,8 +1,8 @@
 <?php
-
 if (!empty($_SESSION['newComment'])) {
-  
+
     foreach ($_SESSION['newComment'] as $value) {
+
        echo '<div class ="avis">';
        
         foreach ($value as $key =>$val) {
@@ -24,8 +24,6 @@ if (!empty($_SESSION['newComment'])) {
         if($key=="note"){
            $note = $val;
         }
-        
-    
     
         }
         echo  "<div class='name'>$firstname $name</div>";
@@ -34,4 +32,5 @@ if (!empty($_SESSION['newComment'])) {
         echo  "</div>";
         echo   "<hr>";
      }
+
 }

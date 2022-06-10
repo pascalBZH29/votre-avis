@@ -2,9 +2,11 @@
 
 session_start();
 
-class User {
+class User
+{
 
     function __construct(string $firstname, string $name, string $mail,int $facture, string $comment,int $note)
+
     {
         $this->firstname = $firstname;
         $this->name = $name;
@@ -14,38 +16,47 @@ class User {
         $this->note = $note;
     }
 
-    public function getFirstname(){
+    public function getFirstname()
+    {
         return $this->firstname;
     }
 
-    public function getName(){
+    public function getName()
+    {
         return $this->name;
     }
 
-    public function getMail(){
+    public function getMail()
+    {
         return $this->mail;
     }
 
-    public function getFacture(){
+    public function getFacture()
+    {
         return $this->facture;
     }
 
-    public function getComment(){
+    public function getComment()
+    {
         return $this->comment;
     }
 
-    public function getNote(){
+    public function getNote()
+    {
         return $this->note;
     }
-
 }
 
 
-if (isset($_POST['submit'])){
-    if (!isset($_SESSION['newComment'])){
+if (isset($_POST['submit'])) {
+    if (!isset($_SESSION['newComment'])) {
 
-        $_SESSION['newComment']=[];
+        $_SESSION['newComment'] = [];
     }
+
+
+    $error = [];
+
 
     array_push($_SESSION['newComment'],new User($_POST['name'],$_POST['firstname'],$_POST['mail'],$_POST['facture'],$_POST['comment'],$_POST['note']));
    
@@ -72,14 +83,34 @@ if (isset($_POST['submit'])){
 }   
 
 
- 
+
+    if (empty($_POST['name'])) {
+        echo $error['name'] = 'Nom obligatoire';
+    }
+
+    if (empty($_POST['mail'])) {
+        echo $error['mail'] = 'Mail obligatoire';
+    } elseif (!filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)) {
+        echo $error['mail'] = 'Ce n est pas une addresse email';
+    }
+
+    if ((int)$_POST['facture'] == false) {
+        echo  $error['facture'] = "Veuillez entrer un nombre ";
+    } elseif (empty($_POST['facture'])) {
+        echo  $error['facture'] = 'Le numéro de facture est obligatoire';
+    }
 
 
- 
+    if (empty($_POST['comment'])) {
+        echo  $error['comment'] = 'Commentaire obligatoire';
+    }
+    if (empty($_POST['note'])) {
+        echo  $error['note'] = 'La note est obligatoire';
+    } elseif ((int)$_POST['note'] == false) {
+        echo  $error['note'] = " Veuillez séléctionner une note";
+    }
 
-
-
-
- 
-
-?>
+    if (empty($error)) {
+        array_push($_SESSION['newComment'], new User($_POST['name'], $_POST['firstname'], $_POST['mail'], $_POST['facture'], $_POST['comment'], $_POST['note']));
+    }
+}
