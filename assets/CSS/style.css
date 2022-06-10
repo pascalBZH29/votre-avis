@@ -31,9 +31,6 @@
     color: white;
   }
 /* ---------------------------------------------------------------- */
-
-
-/*---------------------------------------------------------------- */
 * {
     box-sizing: border-box;
   }
@@ -73,6 +70,7 @@
   }
 
 
+
   .listAvis {
     text-align: center;
     padding: 1rem;
@@ -105,6 +103,7 @@
     
     border:1px solid #536b78;
   }
+
 /* -------------------------------------------------------------- */
 
 * {box-sizing:border-box}
@@ -147,7 +146,6 @@
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
-
 /* Caption text */
 .text {
   color: #030000;
@@ -195,10 +193,7 @@
   from {opacity: .4}
   to {opacity: 1}
 }
-
-
 /*----------------- style pour la page formulaire.php ----------------*/
-
 .bodyFormulaire {
     background: #001D3D;
     font-family: Montserrat, "sans-serif";
@@ -254,8 +249,6 @@ form div>select {
     padding-left: 10px;
 }
 
-
-
 form div>textarea {
     height: 195px;
     padding: 15px 0px 0px 10px;
@@ -291,65 +284,9 @@ margin: 2rem auto;
     cursor: pointer;
 }
 
-
-/*.bouton-valider {
-
-    background: linear-gradient(135deg, #F5515F 0%, #A1051D 100%);
-    animation: nom_anim_bouton 1s infinite alternate
-}
-
-@keyframes nom_anim_bouton {
-
-    from {
-
-        box-shadow: 0 0 5px hsl(0, 53%, 46%)
-    }
-
-    to {
-
-        box-shadow: 0 0 15px hsl(0, 50%, 46%)
-    }
-
-}*/
-
-
-
-
 .bouton-valider {
 
     background: linear-gradient(135deg, #17ead9 0%, #6078ea 100%);
-
-
-}
-
-.bouton-valider:hover {
-
-    animation: pulsation_bouton .8s ease-out
-}
-
-
-
-
-@keyframes pulsation_bouton {
-
-    from {
-        box-shadow: 0 0 0 -3px hsla(0, 0%, 100%, 0), 0 0 0 0 hsl(44, 66%, 57%)
-    }
-
-    to {
-
-        box-shadow: 0 0 0 10px hsla(0, 0%, 100%, 0), 0 0 0 13px hsla(0, 0%, 100%, 0)
-    }
-}
-
-
-
-
-/*.bouton-valider {
-
-    background: linear-gradient(135deg, #fad961 0%, #f76b1c 100%);
-
-
 }
 
 .bouton-valider:hover {
@@ -368,5 +305,63 @@ margin: 2rem auto;
         box-shadow: 0 0 0 10px hsla(0, 0%, 100%, 0), 0 0 0 13px hsla(0, 0%, 100%, 0)
     }
 }
-*/
+/* --------afficher tous les commentaires----------------------------- */
+.listAvis {
+  background-color: yellow;
+  width:auto;
+  height: auto;
+}
 
+/*-------------------Bouton Donner mon avis---------------------------- */
+.buttonAvis {
+  /* display:flex; */
+  /* right: 80% !important; */
+
+  border: 0;
+  width: 25%;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: rgb(49, 110, 207);
+  /* text-shadow: 1px 1px 1px #000; */
+  border-radius: 10px;
+  background-color: #4213ea;
+  background-image: linear-gradient(to top left,
+                                    rgba(0, 0, 0, .2),
+                                    rgba(0, 0, 0, .2) 30%,
+                                    rgba(0, 0, 0, 0));
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+              inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+/* a:hover {
+  color:white;
+} */
+
+/* -----------affichage de la note moyenne-----*/
+.noteMoyenne{
+  text-align: center;
+  
+}
+/* --------afficher le footer---------------------------- */
+footer{
+  background-color: yellowgreen; 
+  position:absolute;
+  bottom:0;
+  width:100%;
+  padding-top:50px;
+  height:220px;
+}
+.footer-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.footer-copyright{
+  text-align: center;
+}

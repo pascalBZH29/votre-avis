@@ -18,7 +18,7 @@ require 'models/User.php';
     <div class="votre-avis">
         <h1>Donner votre avis</h1>
         <p>Un problème, une question, envie de nous envoyer un message d’amour ? N’hésitez pas, votre avis nous intéresse !</p>
-        <form method="post">
+        <form action="" method="post">
             <div>
                 <label for="name">Prénom</label>
                 <input type="text" id="firstname" name="firstname" placeholder="Bob" required>
@@ -37,13 +37,13 @@ require 'models/User.php';
             </div>
             <div>
                 <label for="note">Veuillez donner votre note</label>
-                <select name="note" id="note" required>
+                <select name="note" type="number" id="note" required>
                     <option value="" disabled selected hidden>Choisissez le sujet de votre message</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5</option>
 
                 </select>
             </div>
@@ -57,7 +57,8 @@ require 'models/User.php';
         </form>
         <a href="index.php" class="bouton-valider">sortir</a>
     </div>
-
+<?php 
+?>
 
 </body>
 
