@@ -1,6 +1,7 @@
 <?php
-require 'models/User.php';
 require 'controllers/indexCtrl.php';
+require 'controllers/formulaireCtrl.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +15,7 @@ require 'controllers/indexCtrl.php';
     <title>Document</title>
 </head>
 
-<body class="bodyFomulaire">
+<body class="bodyFormulaire">
     <div class="votre-avis">
         <h1>Donner votre avis</h1>
         <p>Un problème, une question, envie de nous envoyer un message d’amour ? N’hésitez pas, votre avis nous intéresse !</p>

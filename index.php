@@ -1,5 +1,6 @@
 <?php
-require 'models/User.php';
+session_start();
+require 'controllers/formulaireCtrl.php';
 
 ?>
 <!DOCTYPE html>
@@ -74,7 +75,7 @@ require 'models/User.php';
 
 <div class="noteMoyenne">
   <?php
-  if(!empty($_SESSION['noteMoyenne'])){
+  if(isset($_SESSION['noteMoyenne'])){
     echo  "La note moyenne du restaurant est : " . $_SESSION['noteMoyenne']. " .  le nombre d'avis est : ".sizeof($_SESSION['newNote']);
   }
      
