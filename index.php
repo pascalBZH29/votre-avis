@@ -74,6 +74,7 @@ require 'models/User.php';
 
 
 <div class="listAvis">
+	Voir les avis du Bistrot de la gare:<p>
 <?php
 include_once "controllers/indexCtrl.php";
 ?>

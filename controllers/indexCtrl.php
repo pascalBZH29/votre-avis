@@ -6,28 +6,32 @@ if (!empty($_SESSION['newComment'])) {
        echo '<div class ="avis">';
        
         foreach ($value as $key =>$val) {
-        if($key=="name"){
-            echo "<div class='$key'>Nom: $val</div>";
-        }
         if($key=="firstname"){
-            echo "<div class='$key'>Prénom: $val</div>";
+            $firstname = $val;
+        }
+        if($key=="name"){
+            $name = $val;
         }
         if($key=="mail"){
-            echo "<div class='$key'>Mail: $val</div>";
+            $mail = $val;
         }
         if($key=="facture"){
-            echo "<div class='$key'>Facture: $val</div>";
+           $facture = $val;
         }
         if($key=="comment"){
-            echo "<div class='$key'>Commentaire: $val</div>";
+           $comment = $val;
         }
         if($key=="note"){
-            echo "<div class='$key'>Note: $val</div>";
+           $note = $val;
         }
-    
+        
     
     
         }
-        echo '</div>';
+        echo  "<div class='name'>$firstname $name</div>";
+        echo  "<div class='note'>Ma note : $note/5</div>";
+        echo  "<div class='comment'>$comment</div>";
+        echo  "</div>";
+        echo   "<hr>";
      }
 }

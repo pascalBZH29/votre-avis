@@ -1,11 +1,11 @@
 
 /* ------------------------------------------ */
 .bodyIndex{
-    background-color: rgb(171, 211, 218);
+    background-color: #cee5f2;
 }
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: rgb(49, 110, 207);
+    background-color: #7c98b3;
     overflow: hidden;
   }
   
@@ -27,7 +27,7 @@
   
   /* Add a color to the active/current link */
   .topnav a.active {
-    background-color: #4213ea;
+    background-color: #536b78;
     color: white;
   }
 /* ---------------------------------------------------------------- */
@@ -53,7 +53,7 @@
     float: left;
     width: 20%;
     padding: 10px;
-    background: #2196F3;
+    background: #536b78;
     color: white;
     font-size: 17px;
     border: 1px solid grey;
@@ -73,9 +73,38 @@
   }
 
 
+  .listAvis {
+    text-align: center;
+    padding: 1rem;
+  }
 
+  .avis {
+    text-align: start;
+    background-color: #accbe1;
+    padding: 1rem;
+    border-radius: 1rem;
+    
+  }
+  
+  .name {
+    font-weight: bold;
+    font-size:1.4rem ;
+  }
 
+  .note{
+    padding:1rem 0rem 1rem 0rem;
+    font-size: 1.5rem;
+  }
 
+  .comment {
+    font-style: italic;
+  }
+
+  hr{
+    width: 50%;
+    
+    border:1px solid #536b78;
+  }
 /* -------------------------------------------------------------- */
 
 * {box-sizing:border-box}
