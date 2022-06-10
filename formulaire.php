@@ -18,6 +18,7 @@ require 'models/User.php';
     <div class="votre-avis">
         <h1>Donner votre avis</h1>
         <p>Un problème, une question, envie de nous envoyer un message d’amour ? N’hésitez pas, votre avis nous intéresse !</p>
+
         <form <?php if (empty($error)) {
                     echo 'action= "index.php"';
                 } else {
@@ -25,12 +26,12 @@ require 'models/User.php';
                 } ?> method="post">
 
             <div>
-                <label for="name">Nom</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div>
                 <label for="firstname">Prénom</label>
                 <input type="text" id="firstname" name="firstname" required>
+            </div>
+            <div>
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" required>
             </div>
             <div>
                 <label for="email">Mail</label>
@@ -42,13 +43,13 @@ require 'models/User.php';
             </div>
             <div>
                 <label for="note">Veuillez donner votre note</label>
-                <select name="note" id="note" required>
+                <select name="note" type="number" id="note" required>
                     <option value="" disabled selected hidden>Choisissez le sujet de votre message</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5</option>
                 </select>
             </div>
             <div>
@@ -60,6 +61,7 @@ require 'models/User.php';
             </div>
         </form>
     </div>
+
 </body>
 
 </html>
