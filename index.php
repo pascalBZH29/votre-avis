@@ -1,6 +1,5 @@
 <?php
 require 'models/User.php';
-
 ?>
 
 <!DOCTYPE html>

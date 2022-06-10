@@ -18,22 +18,27 @@ require 'models/User.php';
     <div class="votre-avis">
         <h1>Donner votre avis</h1>
         <p>Un problème, une question, envie de nous envoyer un message d’amour ? N’hésitez pas, votre avis nous intéresse !</p>
-        <form method="post">
+        <form <?php if (empty($error)) {
+                    echo 'action= "index.php"';
+                } else {
+                    echo ' ';
+                } ?> method="post">
+
             <div>
                 <label for="name">Nom</label>
-                <input type="text" id="name" name="name" placeholder="Bob" required>
+                <input type="text" id="name" name="name" required>
             </div>
             <div>
                 <label for="firstname">Prénom</label>
-                <input type="text" id="firstname" name="firstname" placeholder="Bobby" required>
+                <input type="text" id="firstname" name="firstname" required>
             </div>
             <div>
                 <label for="email">Mail</label>
-                <input type="email" id="email" name="mail" placeholder="bob.bobby@mail.com" required>
+                <input type="email" id="email" name="mail" required>
             </div>
             <div>
                 <label for="number">Numéro de facture</label>
-                <input type="nummber" id="number" name="facture" required>
+                <input type="number" id="number" name="facture" required>
             </div>
             <div>
                 <label for="note">Veuillez donner votre note</label>
@@ -44,7 +49,6 @@ require 'models/User.php';
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
-
                 </select>
             </div>
             <div>
@@ -55,10 +59,7 @@ require 'models/User.php';
                 <button class="bouton-valider" name="submit" type="submit">Valider</button>
             </div>
         </form>
-        <a href="index.php" class="bouton-valider">sortir</a>
     </div>
-
-
 </body>
 
 </html>

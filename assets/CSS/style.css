@@ -170,7 +170,7 @@
 
 /*----------------- style pour la page formulaire.php ----------------*/
 
-.bodyFormulaire {
+.bodyFomulaire {
     background: #001D3D;
     font-family: Montserrat, "sans-serif";
     display: flex;
@@ -238,7 +238,7 @@ form div>textarea::placeholder {
 }
 
 form div>select:invalid {
-    color: black;
+    color: white;
 }
 
 form div>select option {
@@ -255,7 +255,7 @@ form div:last-child {
 margin: 2rem auto;
     max-width: 400px;
     border: none;
-    color: black;
+    color: white;
     border-radius: .25rem;
     font-size: 1.125rem;
     padding: 20px 60px;
