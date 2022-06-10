@@ -20,12 +20,12 @@ require 'models/User.php';
         <p>Un problème, une question, envie de nous envoyer un message d’amour ? N’hésitez pas, votre avis nous intéresse !</p>
         <form action="" method="post">
             <div>
-                <label for="name">Nom</label>
-                <input type="text" id="name" name="name" placeholder="Bob" required>
+                <label for="name">Prénom</label>
+                <input type="text" id="firstname" name="firstname" placeholder="Bob" required>
             </div>
             <div>
-                <label for="firstname">Prénom</label>
-                <input type="text" id="firstname" name="firstname" placeholder="Bobby" required>
+                <label for="firstname">Nom</label>
+                <input type="text" id="name" name="name" placeholder="Bobby" required>
             </div>
             <div>
                 <label for="email">Mail</label>

@@ -46,6 +46,7 @@ if (isset($_POST['submit'])){
 
         $_SESSION['newComment']=[];
     }
+
     array_push($_SESSION['newComment'],new User($_POST['name'],$_POST['firstname'],$_POST['mail'],$_POST['facture'],$_POST['comment'],$_POST['note']));
    
 
@@ -58,6 +59,8 @@ if (isset($_POST['submit'])){
     }
     array_push($_SESSION['newNote'],(int)$_POST['note']);
 
+    array_push($_SESSION['newComment'],new User($_POST['firstname'],$_POST['name'],$_POST['mail'],$_POST['facture'],$_POST['comment'],$_POST['note']));
+    
     $somme = 0;
  foreach($_SESSION['newNote'] as $note){
      $somme += $note;
