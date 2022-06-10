@@ -80,7 +80,7 @@ if (isset($_POST['submit'])) {
    $noteMoyenne = $somme / (sizeof($_SESSION['newNote']));
    $_SESSION['noteMoyenne']=$noteMoyenne; 
 
-}   
+
 
 
 
@@ -113,4 +113,3 @@ if (isset($_POST['submit'])) {
     if (empty($error)) {
         array_push($_SESSION['newComment'], new User($_POST['name'], $_POST['firstname'], $_POST['mail'], $_POST['facture'], $_POST['comment'], $_POST['note']));
     }
-}
