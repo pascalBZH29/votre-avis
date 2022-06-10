@@ -210,6 +210,7 @@
     border-radius: 8px;
     padding: 0 50px 0 50px;
     background: #003566;
+    color: white;
 }
 
 .votre-avis>h1 {
@@ -308,11 +309,6 @@ margin: 2rem auto;
     }
 }
 /* --------afficher tous les commentaires----------------------------- */
-.listAvis {
-  background-color: yellow;
-  width:auto;
-  height: auto;
-}
 
 /*-------------------Bouton Donner mon avis---------------------------- */
 .buttonAvis {
@@ -353,8 +349,8 @@ a {
 /* --------afficher le footer---------------------------- */
 footer{
   background-color: yellowgreen; 
-  position:absolute;
-  bottom:0;
+  
+  
   width:100%;
   padding-top:50px;
   height:220px;

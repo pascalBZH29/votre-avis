@@ -10,7 +10,7 @@ require 'models/User.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/CSS/style.css">
     <title>Document</title>
 </head>
 
@@ -38,13 +38,13 @@ require 'models/User.php';
                 <input type="email" id="email" name="mail" required>
             </div>
             <div>
-                <label for="number">Numéro de facture</label>
+                <label for="facture">Numéro de facture</label>
                 <input type="number" id="number" name="facture" required>
             </div>
             <div>
                 <label for="note">Veuillez donner votre note</label>
                 <select name="note" type="number" id="note" required>
-                    <option value="" disabled selected hidden>Choisissez le sujet de votre message</option>
+                    <option value="" disabled selected hidden>Choisissez votre note</option>
                     <option value=1>1</option>
                     <option value=2>2</option>
                     <option value=3>3</option>

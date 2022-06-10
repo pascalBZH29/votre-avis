@@ -1,5 +1,6 @@
 <?php
 require 'models/User.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -73,7 +74,7 @@ require 'models/User.php';
 
 <div class="noteMoyenne">
   <?php
-  if(isset($_SESSION['noteMoyenne'])){
+  if(!empty($_SESSION['noteMoyenne'])){
     echo  "La note moyenne du restaurant est : " . $_SESSION['noteMoyenne']. " .  le nombre d'avis est : ".sizeof($_SESSION['newNote']);
   }
      
