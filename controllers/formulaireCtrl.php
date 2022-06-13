@@ -1,5 +1,4 @@
 <?php
-var_dump($_SESSION['newComment']);
 require 'models/User.php';
 
 if (!isset( $_SESSION['error'])) {
