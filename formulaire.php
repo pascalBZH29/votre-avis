@@ -20,27 +20,24 @@ require 'controllers/formulaireCtrl.php';
         <h1>Donner votre avis</h1>
         <p>Un problème, une question, envie de nous envoyer un message d’amour ? N’hésitez pas, votre avis nous intéresse !</p>
 
-        <form <?php if (empty($error)) {
-                    echo 'action= "index.php"';
-                } else {
-                    echo ' ';
-                } ?> method="post">
-
+        <form  action="index.php" method="post">
+          
             <div>
                 <label for="firstname">Prénom</label>
-                <input type="text" id="firstname" name="firstname" required>
+                <input type="text" id="firstname" name="firstname" required><br>
             </div>
             <div>
+           
                 <label for="name">Nom</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" ><br>
             </div>
             <div>
                 <label for="email">Mail</label>
-                <input type="email" id="email" name="mail" required>
+                <input type="email" id="email" name="mail" required><br>
             </div>
             <div>
                 <label for="facture">Numéro de facture</label>
-                <input type="number" id="number" name="facture" required>
+                <input type="number" id="number" name="facture" required><br>
             </div>
             <div>
                 <label for="note">Veuillez donner votre note</label>
@@ -51,11 +48,11 @@ require 'controllers/formulaireCtrl.php';
                     <option value=3>3</option>
                     <option value=4>4</option>
                     <option value=5>5</option>
-                </select>
+                </select><br>
             </div>
             <div>
                 <label for="message">Commentaire</label>
-                <textarea id="message" name="comment" required></textarea>
+                <textarea id="message" name="comment" required></textarea><br>
             </div>
             <div>
                 <button class="bouton-valider" name="submit" type="submit">Valider</button>

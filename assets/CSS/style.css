@@ -3,6 +3,22 @@
 .bodyIndex{
     background-color: #cee5f2;
 }
+/* affiche les erreurs */
+
+.listErrors {
+  width: 100%;
+  background-color: red;
+  padding: 0.8rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.error {
+  color: black;
+  font-weight:400;
+  font-size: medium;
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #7c98b3;
@@ -277,16 +293,19 @@ form div:last-child {
     margin-top: 20px;
 }
 
+
 .date{
   font-size: 1.2rem;
   color: crimson;
-  
 }
 
 .nameDate{
   display: flex;
   justify-content: space-between;
   margin-left: 50px;
+
+span {
+  color: red;
 }
 
 .bouton-valider {
