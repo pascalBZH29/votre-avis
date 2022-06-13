@@ -1,5 +1,6 @@
 <?php
-require 'models/User.php';
+session_start();
+require 'controllers/formulaireCtrl.php';
 
 ?>
 <!DOCTYPE html>
@@ -74,25 +75,34 @@ require 'models/User.php';
 
 <div class="noteMoyenne">
   <?php
-  if(!empty($_SESSION['noteMoyenne'])){
-    echo  "La note moyenne du restaurant est : " . $_SESSION['noteMoyenne']. " .  le nombre d'avis est : ".sizeof($_SESSION['newNote']);
-  }
-     
-  ?> 
+  if(isset($_SESSION['noteMoyenne'])){
+    echo  "La note moyenne du restaurant est : " . round($_SESSION['noteMoyenne'],2) . " .  le nombre d'avis est : ".sizeof($_SESSION['newNote']);
+  } ?>
 
 </div>
-
+<div class="noteStar">
+ <?php 
+  if(isset($_SESSION['noteMoyenne'])){
+  $star = round($_SESSION['noteMoyenne']);
+   for ($i=1; $i <=$star ; $i++) { ?>
+  <div>
+    <img src="assets/image/etoile.png" width="25px" alt="start">
+  </div>
+    <?php
+  }
+  }
+  ?> 
+</div>
 <div class="listAvis">
 	Voir les avis du Bistrot de la gare:<p>
-<?php
+  <?php
   include_once "controllers/indexCtrl.php";
-  
-  ?>
+ ?>
 </div>
 <div class="buttonAvis">
   <button ><a href="formulaire.php">Donner mon avis</a> </button>
 </div>
-  
+    
 <footer>
   <div class="footer-link">
     <div>
@@ -111,7 +121,6 @@ require 'models/User.php';
   </div>
 </footer>
 <script src="assets/JS/script.js"></script>
-
 </body>
 
 </html>
