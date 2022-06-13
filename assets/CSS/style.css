@@ -303,6 +303,7 @@ form div:last-child {
   display: flex;
   justify-content: space-between;
   margin-left: 50px;
+}
 
 span {
   color: red;
