@@ -2,7 +2,7 @@
 class User
 {
 
-    function __construct(string $firstname, string $name, string $mail,int $facture, string $comment,int $note)
+    function __construct(string $firstname, string $name, string $mail, int $facture, string $comment, int $note, string $date, string $time)
 
     {
         $this->firstname = $firstname;
@@ -11,6 +11,8 @@ class User
         $this->facture = $facture;
         $this->comment = $comment;
         $this->note = $note;
+        $this->date = $date;
+        $this->time = $time;
     }
 
     public function getFirstname()
@@ -43,10 +45,4 @@ class User
         return $this->note;
     }
 }
-
-
-
-
-
-
 

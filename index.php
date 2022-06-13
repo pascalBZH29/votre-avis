@@ -18,6 +18,7 @@ require 'controllers/formulaireCtrl.php';
 
 <body class="bodyIndex">
 
+
 <div class="topnav">
   <a class="active" href="#home">Home</a>
   <a href="#news">News</a>
@@ -103,24 +104,26 @@ require 'controllers/formulaireCtrl.php';
   <button ><a href="formulaire.php">Donner mon avis</a> </button>
 </div>
     
-<footer>
-  <div class="footer-link">
-    <div>
-      <p><a href="">Home</a></p>
-      <p><a href="">Contact</a></p>  
-      <p><a href="">Menu</a></p>    
+  <footer>
+    <div class="footer-link">
+      <div>
+        <p><a href="">Home</a></p>
+        <p><a href="">Contact</a></p>
+        <p><a href="">Menu</a></p>
+      </div>
+      <div>
+        <p><a href="">A propos</a></p>
+        <p><a href="">Reservation</a></p>
+        <p><a href="">Actualite</a></p>
+      </div>
     </div>
     <div>
-      <p><a href="">A propos</a></p> 
-      <p><a href="">Reservation</a></p>   
-      <p><a href="">Actualite</a></p>  
+      <p>© Bistrot de la Gare</p>
     </div>
-  </div>
-  <div>
-    <p>© Bistrot de la Gare</p>
-  </div>
-</footer>
-<script src="assets/JS/script.js"></script>
+  </footer>
+  <script src="assets/JS/script.js"></script>
+
+
 </body>
 
 </html>
