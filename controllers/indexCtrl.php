@@ -30,10 +30,15 @@ if (!empty($_SESSION['newComment'])) {
                 $time = $val;
             }
         }
+
         echo  "<div class='nameDate'><div class='name'>$firstname $name </div> <div class='dateTime'><span class='date'>$date</span> <span class='time'>$time</span> </div></div>";
+
         echo  "<div class='note'>Ma note : $note/5</div>";
         echo  "<div class='comment'>$comment</div>";
         echo  "</div>";
         echo   "<hr>";
+
     }
+
 }
+?>

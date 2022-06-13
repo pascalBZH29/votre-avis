@@ -1,7 +1,4 @@
 <?php
-
-
-
 class User
 {
 
@@ -48,3 +45,4 @@ class User
         return $this->note;
     }
 }
+

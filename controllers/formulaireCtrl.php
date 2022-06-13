@@ -78,7 +78,6 @@ if (isset($_POST['submit']) && empty($error)) {
         $somme += $note;
     }
 
-
     $noteMoyenne = $somme / (sizeof($_SESSION['newNote']));
     $_SESSION['noteMoyenne'] = $noteMoyenne;
 }
@@ -95,4 +94,5 @@ if (!empty($_SESSION['error'])) {
     echo "</div>";
 }
 ?>
+
 
