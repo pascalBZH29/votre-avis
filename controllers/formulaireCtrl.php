@@ -1,4 +1,5 @@
 <?php
+var_dump($_SESSION['newComment']);
 require 'models/User.php';
 
 if (!isset( $_SESSION['error'])) {
@@ -13,9 +14,11 @@ if (isset($_POST['submit'])) {
 
        
         $_SESSION['newComment'] = [];
-    
     }
-    
+
+    date_default_timezone_set('Europe/Paris');
+    $date = date('d-m-y');
+    $time = date('H:i:s');
 
     if (empty($_POST['firstname'])) {
         $error['firstname'] = 'Prénom obligatoire';
@@ -26,7 +29,7 @@ if (isset($_POST['submit'])) {
        $error['name'] = 'Nom obligatoire';
        array_push($_SESSION['error'],$error['name']);
     }
-    
+
     if (empty($_POST['mail'])) {
         $error['mail1'] = 'Mail obligatoire';
         array_push($_SESSION['error'],$error['mail1']);
@@ -34,7 +37,7 @@ if (isset($_POST['submit'])) {
         $error['mail2'] = 'Ce n est pas une addresse email';
         array_push($_SESSION['error'],$error['mail2']);
     }
-    
+
     if (empty($_POST['facture'])) {
         $error['facture'] = 'Le numéro de facture est obligatoire';
         array_push($_SESSION['error'],$error['facture']);
@@ -56,31 +59,30 @@ if (isset($_POST['submit'])) {
         array_push($_SESSION['error'],$error['note2']);
     }
 
-    if (empty($error)){
-    array_push($_SESSION['newComment'], new User($_POST['name'], $_POST['firstname'], $_POST['mail'], $_POST['facture'], $_POST['comment'], $_POST['note']));
+    if (empty($error)) {
+        array_push($_SESSION['newComment'], new User($_POST['name'], $_POST['firstname'], $_POST['mail'], $_POST['facture'], $_POST['comment'], $_POST['note'], $date, $time));
     $_SESSION['error'] = [];
     }else{
         header("refresh:10; url=formulaire.php");
     }
-    
- }
+}
 
- if (isset($_POST['submit']) && empty($error)){
-    if (!isset($_SESSION['newNote'])){
+if (isset($_POST['submit']) && empty($error)) {
+    if (!isset($_SESSION['newNote'])) {
 
-        $_SESSION['newNote']=[];
+        $_SESSION['newNote'] = [];
     }
-    array_push($_SESSION['newNote'],(int)$_POST['note']);
-    
-    $somme = 0;
- foreach($_SESSION['newNote'] as $note){
-     $somme += $note;
- }
-    
-   $noteMoyenne = $somme / (sizeof($_SESSION['newNote']));
-   $_SESSION['noteMoyenne']=$noteMoyenne; 
+    array_push($_SESSION['newNote'], (int)$_POST['note']);
 
-}   
+    $somme = 0;
+    foreach ($_SESSION['newNote'] as $note) {
+        $somme += $note;
+    }
+
+
+    $noteMoyenne = $somme / (sizeof($_SESSION['newNote']));
+    $_SESSION['noteMoyenne'] = $noteMoyenne;
+}
 
 if (!empty($_SESSION['error'])) {
    
@@ -94,3 +96,4 @@ if (!empty($_SESSION['error'])) {
     echo "</div>";
 }
 ?>
+

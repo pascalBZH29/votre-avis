@@ -112,6 +112,7 @@
 
   .comment {
     font-style: italic;
+    font-size: 1.5rem;
   }
 
   hr{
@@ -213,7 +214,7 @@
 
 .bodyFormulaire {
 
-    background: #001D3D;
+    background: white;
     font-family: Montserrat, "sans-serif";
     display: flex;
     justify-content: center;
@@ -221,11 +222,11 @@
 }
 
 .votre-avis {
-    width: 700px;
+    width: 900px;
     border: 1px solid;
     border-radius: 8px;
     padding: 0 50px 0 50px;
-    background: #003566;
+    background: #637081;
     color: white;
 }
 
@@ -253,7 +254,7 @@ form div>label {
 form div>input,
 form div>select,
 form div>textarea {
-    background: #a2d6f9;
+    background: #CEE5F2;
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -292,6 +293,17 @@ form div:last-child {
     margin-top: 20px;
 }
 
+
+.date{
+  font-size: 1.2rem;
+  color: crimson;
+}
+
+.nameDate{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50px;
+
 span {
   color: red;
 }
@@ -305,29 +317,14 @@ margin: 2rem auto;
     font-size: 1.125rem;
     padding: 20px 60px;
     cursor: pointer;
+    background-color: #536B78;
+    transition: width -5s;
 }
 
-.bouton-valider {
-
-    background: linear-gradient(135deg, #17ead9 0%, #6078ea 100%);
+.bouton-valider:hover{
+  background-color: gold;
 }
 
-.bouton-valider:hover {
-
-    animation: pulsation_bouton .8s ease-out
-}
-
-@keyframes pulsation_bouton {
-
-    from {
-        box-shadow: 0 0 0 -3px hsla(0, 0%, 100%, 0), 0 0 0 0 hsl(44, 66%, 57%)
-    }
-
-    to {
-
-        box-shadow: 0 0 0 10px hsla(0, 0%, 100%, 0), 0 0 0 13px hsla(0, 0%, 100%, 0)
-    }
-}
 /* --------afficher tous les commentaires----------------------------- */
 
 /*-------------------Bouton Donner mon avis---------------------------- */
