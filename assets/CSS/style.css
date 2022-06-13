@@ -3,6 +3,22 @@
 .bodyIndex{
     background-color: #cee5f2;
 }
+/* affiche les erreurs */
+
+.listErrors {
+  width: 100%;
+  background-color: red;
+  padding: 0.8rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.error {
+  color: black;
+  font-weight:400;
+  font-size: medium;
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #7c98b3;
@@ -274,6 +290,10 @@ form div>select option {
 form div:last-child {
     align-items: center;
     margin-top: 20px;
+}
+
+span {
+  color: red;
 }
 
 .bouton-valider {
